@@ -2,13 +2,14 @@
 <html>
 <head>
   <link rel="shortcut icon" type="image/png" href="/favicon.png">
-	<title>Meu site</title>
+	<title>Acesso Rápido Maranet</title>
   
 	<style>
 		body {
-			
+			display: inline-block;
 			background-image: url("https://maranet.com.br/wp-content/uploads/2022/10/bg_slideshow.jpg");
 			background-size: cover;
+			background-repeat: no-repeat;
 			font-family: 'Montserrat', sans-serif;
 			margin: 0;
 			padding: 0;
@@ -25,24 +26,27 @@
 		}
 		nav {
 			position: absolute;
-            display: flex;
+            display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 10px;
             justify-content: center;
 			background-color: #005a7b;
-            height: 200px;
+			width: 95%;
+            height: 50%;
 			padding: 5px;
 			text-align: center;
-			margin-top: 30px;
+			margin: 30px;
 			border-radius: 10px;
 			z-index: 2;
 			/* box-shadow: 2px 2px 4px #000000; */
 		}
 		nav a {
-            display: flex;
+            display: grid;
             text-align: center;
             justify-content: center;
             align-items: center;
-            width: 200px;
-            height: 200px;
+            width: 50%;
+            height: 30%;
 			color: white;
 			text-decoration: none;
 			margin-right: 30px;
@@ -73,11 +77,13 @@
         height: 180px;
     }
     #header {
-        display: flex;
+        display: grid;
+		width: 80%;
+		border: 20%;
     }
 	#image {
 		position: absolute;
-		width: 100%;
+		width: 90%;
 	}
 	</style>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
@@ -123,9 +129,13 @@ container.addEventListener('mousemove', (e) => {
 });
 
 container.addEventListener('mouseleave', () => {
+	image.style.transition = "transform 1s ease-out";
   image.style.transform = `translate(0px, 0px)`;
 });
 
+</script>
+<script>
+	
 </script>
 </body>
 </html>
