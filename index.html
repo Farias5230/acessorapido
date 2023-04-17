@@ -1,141 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="shortcut icon" type="image/png" href="/favicon.png">
 	<title>Acesso Rápido Maranet</title>
-  
+	<link rel="icon" href="img/logo.png">
 	<style>
 		body {
-			display: inline-block;
-			background-image: url("https://maranet.com.br/wp-content/uploads/2022/10/bg_slideshow.jpg");
-			background-size: cover;
+			display: flex;
+			background-image: url("img/fundobg.jpg");
+			background-size:cover;
 			background-repeat: no-repeat;
-			font-family: 'Montserrat', sans-serif;
-			margin: 0;
-			padding: 0;
-		}
-		h1 {
-			color: #fff;
-			font-size: 40px;
+			flex-direction: column;
+			align-items: center;
 			text-align: center;
-			margin-top: 50px;
-			/* text-shadow: 2px 2px 4px #000000; */
+			font-family: 'Montserrat', sans-serif;
+
 		}
-		main {
-			display: inline;
-		}
-		nav {
-			position: absolute;
-            display: grid;
+		.grid-container {
+			width: 80%;
+			min-width: 500px; ;
+			height: 70vh;
+			display: grid;
 			grid-template-columns: repeat(2, 1fr);
 			grid-gap: 10px;
-            justify-content: center;
 			background-color: #005a7b;
-			width: 95%;
-            height: 50%;
-			padding: 5px;
-			text-align: center;
-			margin: 30px;
+			justify-content: center;
+			align-items: center;
+			padding: 10px;
 			border-radius: 10px;
-			z-index: 2;
-			/* box-shadow: 2px 2px 4px #000000; */
 		}
-		nav a {
-            display: grid;
-            text-align: center;
-            justify-content: center;
-            align-items: center;
-            width: 50%;
-            height: 30%;
-			color: white;
-			text-decoration: none;
-			margin-right: 30px;
+		.grid-container a {
+			width: 100%;
+			
+			height: 90%;
+			
 			font-size: 20px;
+			border-radius: 10px;
+			border: none;
+			background-color: none;
 			
-			
-			border-radius: 20px;
-			transition: all 0.3s ease-in-out;
-		}
-        
-		nav a:hover {
-			background-color: rgb(255, 255, 255);
-			color: #f300a2;
-		}
 
-    #img1 {
-      
-      padding: 0px;
-      width: 20%;
-
-    }
-    #mary {
-      width: 100%;
-      height: 100%;
-    }
-    .botoes {
-        width: 180px;
-        height: 180px;
-    }
-    #header {
-        display: grid;
-		width: 80%;
-		border: 20%;
-    }
-	#image {
-		position: absolute;
-		width: 90%;
-	}
+		}
+		.grid-container a:hover {
+			background-color: #fff;
+		}
+		.logo {
+			width: 20%;
+			height: 20%;
+		}
+		h1 {
+			color: #ffffff;
+			font-size: 40px;
+			text-align: center;
+			margin-top: 10px;
+		}
+		.botoes {
+			width: 40%;
+			height: 80%;
+			min-width: 200px;
+			min-height: 200px;
+		}
 	</style>
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-
 </head>
 <body>
-	
-<div id="header">
-    <img src="img/NOVA LOGO MARANET branco.png" style="width: 200px; height: 50px; margin: 50px;">
-	<h1>Acesso Rápido Maranet</h1>
-</div>
-<main>
-<div id="container">
-	<img id="image" src="https://maranet.com.br/wp-content/uploads/2020/02/Group-10241.png">
 	<nav>
-		<a href="http://central.maranet.com.br/clientes/login"><img class="botoes" src="img/boletos.png" alt=""></a>
-		<a href="https://wa.me/+5598992031546"><img class="botoes" src="img/suporte.png" alt=""></a>
-		<a href="https://maranet.com.br/"><img class="botoes" src="img/fundo1.png" alt=""></a>
-		<a href="#"><img class="botoes" src="img/fundo1.png" alt=""></a>
-	</nav>	
-</div>
-
-
-<div id="img1" style="float: right; bottom: 0;right: 0;">
- <img id="mary" src="https://maranet.com.br/wp-content/uploads/2022/10/mascote_slide_01_b-min.png" alt="" tyle="float: right;  bottom: 0;right: 0;">
-</div>
-</main>
-<script>
-const container = document.getElementById('container');
-const image = document.getElementById('image');
-const containerWidth = container.offsetWidth;
-const containerHeight = container.offsetHeight;
-const scale = 0.02; // valor de escala, ajuste conforme necessário
-
-container.addEventListener('mousemove', (e) => {
-  const mouseX = e.clientX;
-  const mouseY = e.clientY;
-
-  const imageX = (container.offsetLeft + (containerWidth / 2) - mouseX) * scale;
-  const imageY = (container.offsetTop + (containerHeight / 2) - mouseY) * scale;
-
-  image.style.transform = `translate(${imageX}px, ${imageY}px)`;
-});
-
-container.addEventListener('mouseleave', () => {
-	image.style.transition = "transform 1s ease-out";
-  image.style.transform = `translate(0px, 0px)`;
-});
-
-</script>
-<script>
-	
-</script>
+		<img class="logo" src="img/NOVA LOGO MARANET branco.png">
+		<h1>Acesso Rápido</h1>
+	</nav>
+	<div class="grid-container">
+		<a href="http://central.maranet.com.br/clientes/login">
+			<img class="botoes" src="img/boletos.png" alt=""></a>
+		<a href="https://wa.me/+5598992031546">
+			<img class="botoes" src="img/suporte.png" alt=""></a>
+		<a href="https://maranet.com.br/">
+			<img class="botoes" src="img/fundo1.png" alt=""></a>
+		<a href="#">
+			<img class="botoes" src="img/fundo1.png" alt=""></a>
+	</div>
 </body>
 </html>
